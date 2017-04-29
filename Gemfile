@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'sqlite3', group: :development
 # 本番ではpostgressを使用する
 gem 'pg', group: :production
+gem 'devise'
+
 
 
 
