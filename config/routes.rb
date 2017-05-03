@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'mountains/new'
+
+  get 'mountains/show'
+
+  get 'mountains/edit'
+
+  get 'mountains/index'
+
   devise_for :users
   root 'pages#home'
 
