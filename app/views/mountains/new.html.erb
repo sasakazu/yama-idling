@@ -1,2 +1,45 @@
-<h1>Mountains#new</h1>
-<p>Find me in app/views/mountains/new.html.erb</p>
+
+<%= render 'shared/header' %>
+
+<div class="container">
+
+  <h2>山の登録</h2>
+
+
+
+<%= form_for @mountain do |f| %>
+
+
+
+   <%= f.label :名称 %><br>
+   <%= f.text_field :name %><br>
+
+
+   <%= f.label :場所 %><br>
+   <%= f.text_field :where %><br>
+
+   <%= f.label :契約期間 %><br>
+   <%= f.text_field :long %><br>
+
+   <%= f.label :契約金額 %><br>
+   <%= f.text_field :price %><br>
+
+
+   <%= f.label :イメージ画像 %><br>
+   <%= f.file_field :image %><br>
+
+
+   <%= f.submit "登録する" %><br>
+
+
+
+<% end %>
+
+
+
+ </div>
+
+
+
+
+<%= render 'shared/footer' %>

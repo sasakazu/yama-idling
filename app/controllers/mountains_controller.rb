@@ -1,13 +1,47 @@
 class MountainsController < ApplicationController
-  def new
-  end
 
-  def show
+  def new
+    @mountain = Mountain.new
   end
 
   def edit
   end
 
-  def index
+
+
+
+  def create
+
+    @mountain = Mountain.new(mountain_params)    # 実装は終わっていないことに注意!
+
+
+      if @mountain.save
+          redirect_to @mountain
+    	else
+    		render "new"
+    	end
   end
+
+
+
+
+
+  def show
+    @mountain = Mountain.find(params[:id])
+  end
+
+
+  def index
+    @mountains = Mountain.all
+  end
+
+
+  private
+
+    def mountain_params
+      params.require(:mountain).permit(:name, :image, :price, :where, :long)
+    end
+
+
+
 end
