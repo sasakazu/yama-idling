@@ -2,13 +2,13 @@
 
 
 <div class="col-sm-6 col-md-4">
-  <div class="thumbnail">
-    <%= link_to image_tag("mountain.jpg"), mountain %>
+  <div class="thumbnail mountain-image">
+    <%= image_tag mountain.image %>
     <div class="caption">
-      <h3><%= mountain.name %></h3>
-      <p class="yama-explain"><%= mountain.where %></p>
-      <p class="yama-explain"><%= mountain.price %></p>
-      <p class="yama-explain"><%= mountain.long %></p>
+      <h3>タイトル：<%= mountain.name %></h3>
+      <p class="yama-explain">所在地：<%= mountain.where %></p>
+      <p class="yama-explain">月額：<%= mountain.price %>円</p>
+      <p class="yama-explain">期間：<%= mountain.long %>ヶ月</p>
 
       <p><%= link_to '詳細を見にいく', mountain, :class => "btn btn-primary" %></p>
 
