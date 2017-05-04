@@ -1,3 +1,27 @@
 // Place all the styles related to the mountains controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+// _mountain.html.erb
+
+.yama-explain {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+// index.html.erb
+
+
+.index-mountain-title {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  i {
+    padding-right: 10px;
+    color: rgba(255, 138, 0, 0.85);
+  }
+}

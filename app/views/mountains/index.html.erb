@@ -1,12 +1,17 @@
 
 <%= render 'shared/header' %>
 
-<h1>Mountains#index</h1>
-<p>Find me in app/views/mountains/index.html.erb</p>
+
+  <div class="container">
+
+    <h1 class="index-mountain-title"><%= fa_icon "sun-o" %>山の一覧</h1>
 
 
-<div class="">
-  <%= render @mountains %>
-</div>
+    <div class="row">
+
+        <%= render @mountains %>
+
+      </div>
+    </div>
 
 <%= render 'shared/footer' %>
