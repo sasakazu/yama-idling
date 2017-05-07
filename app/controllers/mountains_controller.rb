@@ -39,7 +39,7 @@ class MountainsController < ApplicationController
   private
 
     def mountain_params
-      params.require(:mountain).permit(:name, :image, :price, :where, :long)
+      params.require(:mountain).permit(:name, :image, :image2, :image3, :price, :where, :long)
     end
 
 

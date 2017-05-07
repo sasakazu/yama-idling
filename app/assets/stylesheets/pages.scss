@@ -58,6 +58,10 @@
   text-align: center;
   margin-top: 70px;
   margin-bottom: 50px;
+
+  i {
+    padding-right: 7px;
+  }
 }
 
 .about-page-contents {
@@ -75,5 +79,10 @@
   h3 {
     color: #222;
     font-size: 18px;
+  }
+
+  i {
+    padding-right: 7px;
+    color: #6bc13d;
   }
 }
