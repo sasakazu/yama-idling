@@ -7,8 +7,16 @@
 // _mountain.html.erb
 
 .yama-explain {
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-top: 23px;
+    margin-bottom: 27px;
+
+   p {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
 }
 
 
@@ -30,5 +38,16 @@
   img {
     height: 180px!important;
     width: 100%!important;
+  }
+}
+
+
+// show.html.erb
+
+
+.mountain-show {
+  img {
+    width: 100%;
+    
   }
 }

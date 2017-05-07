@@ -57,5 +57,23 @@
 .about-page-title {
   text-align: center;
   margin-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+}
+
+.about-page-contents {
+  height: 300px;
+
+  img {
+    height: 130px;
+    width: 80%;
+  }
+  p {
+    color: #666;
+    line-height: 160%;
+  }
+
+  h3 {
+    color: #222;
+    font-size: 18px;
+  }
 }

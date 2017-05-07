@@ -6,9 +6,12 @@
     <%= image_tag mountain.image %>
     <div class="caption">
       <h3>タイトル：<%= mountain.name %></h3>
-      <p class="yama-explain">所在地：<%= mountain.where %></p>
-      <p class="yama-explain">月額：<%= mountain.price %>円</p>
-      <p class="yama-explain">期間：<%= mountain.long %>ヶ月</p>
+
+        <div class="yama-explain">
+          <p>所在地：<%= mountain.where %></p>
+          <p>月額：<%= mountain.price %>円</p>
+          <p>期間：<%= mountain.long %>ヶ月</p>
+        </div>
 
       <p><%= link_to '詳細を見にいく', mountain, :class => "btn btn-primary" %></p>
 
