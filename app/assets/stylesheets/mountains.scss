@@ -44,10 +44,15 @@
 
 // show.html.erb
 
+.carousel-inner {
+    overflow: inherit!important;
+  }
 
-.mountain-show {
+.mountain-show-image {
+
   img {
     width: 100%;
-    
+    height: 500px;
+
   }
 }

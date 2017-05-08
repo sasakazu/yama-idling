@@ -4,13 +4,10 @@ class Mountain < ApplicationRecord
   mount_uploader :image2, ImageUploader
   mount_uploader :image3, ImageUploader
 
-  validates :name, presence: true
-  validates :price, presence: true
-  validates :where, presence: true
-  validates :long, presence: true
-  validates :image, presence: true
-  validates :image2, presence: true
-  validates :image3, presence: true
+  validates :name, :price, :where, :long, :image, :image2, :image3, presence: true
+
+  default_scope -> { order(created_at: :desc) }
+
 
 
 

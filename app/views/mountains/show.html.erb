@@ -1,12 +1,10 @@
 
 <%= render 'shared/header' %>
 
-<div class="container">
-
-
-<h2><%= fa_icon "vcard" %>山の詳細</h2>
 
 <div class="row mountain-show">
+
+  <div class="mountain-show-image">
 
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -47,14 +45,36 @@
 </div>
 
 
-    <p><%= @mountain.name %></p>
+</div>
+<!-- mountain-show-image -->
+
+
+  <div class="mountain-show-contents">
+
+    <div class="container">
+
+
+    <h3>概要</h3>
+
+    <div class="">
+      <h2>タイトルタイトル</h2>
+      <img src="..." alt="..." class="img-circle">
+      <!-- <%= image_tag(@mountain.image) %> -->
+    </div>
+<!--
+<%= @mountain.name %>
     <p><%= @mountain.where %></p>
     <p><%= @mountain.price %></p>
-    <p><%= @mountain.long %></p>
+    <p><%= @mountain.long %></p>  -->
+
+    </div>
 
   </div>
+  <!-- mountain-show-contents -->
 
-</div>
+  </div>
+  <!-- mountain-show -->
+
 
 
 
