@@ -1,0 +1,17 @@
+
+<%= render 'shared/header' %>
+
+
+
+<%= form_for @user do |f| %>
+
+ <%= f.label :アイコン %><br>
+ <%= f.file_field :icon %><br>
+
+ <%= f.submit 'send' %>
+
+ <% end %>
+
+
+
+<%= render 'shared/footer' %>

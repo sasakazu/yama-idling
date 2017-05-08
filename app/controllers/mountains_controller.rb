@@ -28,6 +28,8 @@ class MountainsController < ApplicationController
 
   def show
     @mountain = Mountain.find(params[:id])
+    # @user = current_user.mountain.find(params[:id])
+
   end
 
 
@@ -40,6 +42,10 @@ class MountainsController < ApplicationController
 
     def mountain_params
       params.require(:mountain).permit(:name, :image, :image2, :image3, :price, :where, :long)
+    end
+
+    def user_params
+        params.require(:user).permit(:icon)
     end
 
 

@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'users/index'
+
+  get 'users/show'
+
   resources :mountains
 
   devise_for :users
+
+  resources :users
+
 
   root 'pages#home'
 
