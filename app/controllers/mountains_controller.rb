@@ -12,8 +12,7 @@ class MountainsController < ApplicationController
 
   def create
 
-    @mountain = Mountain.new(mountain_params)
-
+    @mountain = current_user.mountains.build(mountain_params)
 
       if @mountain.save
           redirect_to @mountain
@@ -28,7 +27,7 @@ class MountainsController < ApplicationController
 
   def show
     @mountain = Mountain.find(params[:id])
-    # @user = User.find(params[:id])
+
 
   end
 
