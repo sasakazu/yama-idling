@@ -54,18 +54,18 @@
     <div class="container">
 
 
-    <h3>概要</h3>
 
-    <div class="">
-      <h2>タイトルタイトル</h2>
-      <!-- <img src="..." alt="..." class="img-circle"> -->
-      <%= image_tag(current_user.icon) %>
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="mountain-title">タイトルタイトル</h2>
+
+      </div>
+      <div class="col-md-4">
+        <%= link_to image_tag(current_user.icon, :class => "img-circle"), current_user %>
+
+      </div>
     </div>
-<!--
-<%= @mountain.name %>
-    <p><%= @mountain.where %></p>
-    <p><%= @mountain.price %></p>
-    <p><%= @mountain.long %></p>  -->
+
 
     </div>
 

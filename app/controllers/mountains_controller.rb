@@ -12,7 +12,7 @@ class MountainsController < ApplicationController
 
   def create
 
-    @mountain = Mountain.new(mountain_params)    # 実装は終わっていないことに注意!
+    @mountain = Mountain.new(mountain_params)
 
 
       if @mountain.save
@@ -28,7 +28,7 @@ class MountainsController < ApplicationController
 
   def show
     @mountain = Mountain.find(params[:id])
-    # @user = current_user.mountain.find(params[:id])
+    # @user = User.find(params[:id])
 
   end
 
