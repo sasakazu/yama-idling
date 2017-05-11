@@ -28,6 +28,9 @@ class MountainsController < ApplicationController
   def show
     @mountain = Mountain.find(params[:id])
 
+    @user = User.paginate(page: params[:page])
+
+
 
   end
 
@@ -44,7 +47,7 @@ class MountainsController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:icon)
+        params.require(:user).permit(:icon,:user_id)
     end
 
 

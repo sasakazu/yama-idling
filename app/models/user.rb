@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   mount_uploader :icon, ImageUploader
 
-  has_many :mountains
+  has_many :mountains, dependent: :destroy
 
 end

@@ -8,7 +8,10 @@ class Mountain < ApplicationRecord
 
   default_scope -> { order(created_at: :desc) }
 
-  belongs_to :user
+  belongs_to :user, foreign_key: "user_id"
+
+  validates :user_id, presence: true
+
 
 
 
