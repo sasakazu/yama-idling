@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # @user = @user.mountain.paginate(page: params[:page])
+    @mountain = @user.mountains.paginate(page: params[:page])
 
   end
 
