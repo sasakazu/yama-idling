@@ -1,14 +1,22 @@
 Rails.application.routes.draw do
 
-  get 'users/index'
+  #
+  # resources :user, :shallow => true do
+  #   resources :users
+  # end
 
-  get 'users/show'
+  # get '/mountains/:user_id' => 'users#show'
 
   resources :mountains
 
   devise_for :users
 
   resources :users
+
+  #
+  # resources :user do
+  #   resources :mountain
+  # end
 
 
   root 'pages#home'

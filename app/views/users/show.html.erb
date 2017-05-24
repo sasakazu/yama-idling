@@ -2,13 +2,37 @@
 
 <%= render 'shared/header' %>
 
-<%= @user.email %>
-<%= image_tag(@user.icon) %>
+<div class="container">
+
+  <div class="user-show-profile">
+    <div class="row">
+
+      <div class="col-md-4">
+        <%= image_tag(@user.icon, :class => "img-circle") %>
+
+      </div>
+
+      <div class="col-md-8 user-show-detail">
+        <p>名前：<%= @user.name %></p>
+        <p>メールアドレス：<%= @user.email %></p>
+
+      </div>
 
 
-<%= render @mountain %>
+  </div>
+
+  <div class="row user-have-mountains">
+
+    <h2>所有している山</h2>
+
+    <%= render @mountain %>
+
+  </div>
 
 
+</div>
+
+</div>
 
 
 <%= render 'shared/footer' %>

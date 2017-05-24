@@ -28,8 +28,8 @@ class MountainsController < ApplicationController
   def show
     @mountain = Mountain.find(params[:id])
 
-    @user = User.paginate(page: params[:page])
-
+    # @user = Mountain.find_by(user_id: params[:user_id])
+    # @user = @mountain.paginate(page: params[:page])
 
 
   end
@@ -43,11 +43,11 @@ class MountainsController < ApplicationController
   private
 
     def mountain_params
-      params.require(:mountain).permit(:name, :image, :image2, :image3, :price, :where, :long)
+      params.require(:mountain).permit(:name, :image, :image2, :image3, :price, :where, :long, :user_id)
     end
 
     def user_params
-        params.require(:user).permit(:icon,:user_id)
+        params.require(:user).permit(:icon)
     end
 
 

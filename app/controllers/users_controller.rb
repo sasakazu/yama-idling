@@ -5,9 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user =  User.find(params[:id])
-    @mountain = @user.mountains.paginate(page: params[:page])
-
+    @user = User.find(params[:id])
+    # @user = @user.mountain.paginate(page: params[:page])
 
   end
 
@@ -46,7 +45,7 @@ end
   private
 
     def user_params
-        params.require(:user).permit(:icon)
+        params.require(:user).permit(:icon, :name)
     end
 
 
