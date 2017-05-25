@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get 'user/:user_id', to: 'user#show'
+
   #
   # resources :user do
   #   resources :mountain

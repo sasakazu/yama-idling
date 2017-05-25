@@ -5,8 +5,18 @@ class MountainsController < ApplicationController
   end
 
   def edit
+    @mountain = Mountain.find(params[:id])
   end
 
+
+  def update
+   @mountain = Mountain.find(params[:id])
+   if @mountain.update_attributes(mountain_params)
+         redirect_to @mountain
+   else
+     render 'edit'
+   end
+  end
 
 
 
@@ -27,9 +37,7 @@ class MountainsController < ApplicationController
 
   def show
     @mountain = Mountain.find(params[:id])
-
-    # @user = Mountain.find_by(user_id: params[:user_id])
-    # @user = @mountain.paginate(page: params[:page])
+    @user = Mountain.find_by(user_id: params[:user_id])
 
 
   end
@@ -47,7 +55,7 @@ class MountainsController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:icon)
+        params.require(:user).permit(:icon, :name, :email)
     end
 
 
