@@ -1,9 +1,11 @@
 
 <%= render 'shared/header' %>
 
-<div class="container">
+  <h2 class="mountain-new-title">登録画面</h2>
 
-  <h2>山の登録</h2>
+
+<div class="mountain-new-wrapper">
+
 
 
 
@@ -34,7 +36,10 @@
    <%= f.label :画像３ %><br>
    <%= f.file_field :image3 %><br>
 
-   <%= f.submit "登録する" %><br>
+<div class="mountain-new-submit">
+  <%= f.submit "登録する" %><br>
+
+</div>
 
 
 
