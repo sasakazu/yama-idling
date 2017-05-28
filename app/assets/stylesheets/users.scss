@@ -35,3 +35,50 @@
     color: #666;
   }
 }
+
+// registration/new.html.erb
+
+.sign-up {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  input[type="email"] {
+    width: 90%;
+  }
+
+  input[type="password"] {
+    width: 90%;
+  }
+
+  input[type="email"] {
+      width: 90%;
+    }
+
+  input[type="submit"] {
+      margin-top: 50px;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: rgb(49, 198, 19);
+      color: #FFF;
+      border: none;
+      text-align: center;
+      width: 200px;
+      display: block;
+      border-radius: 3px;
+    }
+
+  label {
+    margin-top: 27px;
+    margin-bottom: 20px;
+
+  }
+
+}
+
+.sign-up-title {
+  text-align: center;
+  color: #666;
+  margin-top: 50px;
+
+}
