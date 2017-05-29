@@ -3,7 +3,7 @@
 
 <div class="col-sm-6 col-md-4">
   <div class="thumbnail mountain-image">
-    <%= image_tag mountain.image %>
+    <%= link_to image_tag(mountain.image), mountain %>
     <div class="caption">
       <h3>タイトル：<%= mountain.name %></h3>
 

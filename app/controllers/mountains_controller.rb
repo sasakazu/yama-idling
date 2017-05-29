@@ -37,8 +37,7 @@ class MountainsController < ApplicationController
 
   def show
     @mountain = Mountain.find(params[:id])
-    @user = Mountain.find_by(user_id: params[:user_id])
-
+    @user = @mountain.user
 
   end
 

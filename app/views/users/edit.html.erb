@@ -1,21 +1,34 @@
 
 <%= render 'shared/header' %>
 
+<div>
+  <h2 class="user-edit-title">プロフィール編集</h2>
+</div>
+
+<div class="user-edit-wrapper">
 
 
-<%= form_for @user do |f| %>
+    <%= form_for @user do |f| %>
 
- <%= f.label :アイコン %><br>
- <%= f.file_field :icon %><br>
+     <%= f.label :アイコン %><br>
+     <%= f.file_field :icon %><br>
 
 
-  <%= f.label :名前 %><br>
-  <%= f.text_field :name %><br>
+      <%= f.label :名前 %><br>
+      <%= f.text_field :name %><br>
 
- <%= f.submit 'send' %>
+      <%= f.label :メールアドレス %><br>
+      <%= f.text_field :email %><br>
 
- <% end %>
 
+
+
+     <%= f.submit '編集' %>
+
+     <% end %>
+
+
+</div>
 
 
 <%= render 'shared/footer' %>

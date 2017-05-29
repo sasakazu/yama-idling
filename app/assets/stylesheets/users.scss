@@ -34,6 +34,25 @@
     padding-top: 20px;
     color: #666;
   }
+
+  a {
+    display: block;
+    border: 1px #53d42c solid;
+    width: 200px;
+    text-align: center;
+    color: #53d42c;
+    padding: 7px;
+    margin-top: 30px;
+
+  }
+
+  a:hover {
+    color: #FFF;
+    background: #53d42c;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+
+  }
 }
 
 // registration/new.html.erb
@@ -80,5 +99,51 @@
   text-align: center;
   color: #666;
   margin-top: 50px;
+
+}
+
+
+// edit.html.erb
+
+.user-edit-title {
+  text-align: center;
+  color: #53d42c;
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+}
+
+.user-edit-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  input[type="text"] {
+    width: 100%;
+    border: 0;
+    padding: 7px;
+    font-size: 1.3em;
+    font-family: Arial, sans-serif;
+    color: #aaa;
+    border:solid 1px #ccc;
+    margin: 0 0 20px;
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+
+  }
+
+  input[type="submit"] {
+    margin-top: 50px;
+    padding: 10px 50px;
+    color: #53d42c;
+    background: #FFF;
+    border: 1px solid #53d42c;
+    border-radius: 3px;
+  }
+
+  label {
+    margin-top: 10px;
+  }
 
 }
