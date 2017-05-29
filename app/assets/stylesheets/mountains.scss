@@ -47,7 +47,7 @@
 
 
 .mountain-show-image {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 
   h2 {
     margin-bottom: 50px;
@@ -58,6 +58,7 @@
   img {
     width: 300px;
     height: 300px;
+    border-radius: 5px;
     display: block;
     margin: 0 auto;
     padding-bottom: 10px;
@@ -65,13 +66,17 @@
   }
 }
 
+.mountain-user {
+  padding-bottom: 50px;
+}
+
 .mountain-show-contents {
     margin-top: 50px;
     margin-bottom: 100px;
 
   img {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
   }
 }
 
@@ -86,7 +91,7 @@
   p {
     text-align: center;
     color: #666;
-    font-size: 20px;
+    font-size: 25px;
   }
 
   i {
@@ -110,6 +115,8 @@
   }
 
 }
+
+
 
 
 

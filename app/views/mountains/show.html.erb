@@ -8,12 +8,27 @@
 
 
     <div class="mountain-show-contents">
+      <div class="container mountain-user">
+
+        <div class="mountain-title col-md-5">
+          <h2><%= @mountain.name %></h2>
+        </div>
+
+        <div class="col-md-5">
+
+          <%= link_to image_tag(@user.icon, :class => "img-circle"), @user %>
+
+        </div>
+
+      </div>
+
       <div class="container">
 
-        <h2 class="mountain-title">
-          <%= @mountain.name %>
-        </h2>
+
         <hr>
+
+        <div class="row">
+
 
         <div class="col-md-4 mountain-detail">
           <i class="fa fa-money" aria-hidden="true"></i>
@@ -30,22 +45,20 @@
           <p>期間：<%= @mountain.long %>ヶ月</p>
         </div>
 
-
       </div>
 
-<%= link_to 'user', @user %>
+      </div>
 
 
     </div>
 
-    <hr>
+  </div>
+
 
   <div class="container">
     <div class="row mountain-show-image">
 
-      <h2><i class="fa fa-camera" aria-hidden="true"></i>
-        写真
-      </h2>
+
 
       <div class="col-md-4">
         <p><%= image_tag(@mountain.image) %>
@@ -65,6 +78,9 @@
 
   </div>
 
+  <div class="chat">
+    <%= link_to '問い合わせする' %>
+  </div>
 
 
 
