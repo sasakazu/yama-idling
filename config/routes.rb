@@ -13,7 +13,10 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get 'user/:user_id', to: 'user#show'
+  # get 'user/:user_id', to: 'user#show'
+
+  post 'mountain/pay' => 'mountains#pay'
+
 
   #
   # resources :user do
