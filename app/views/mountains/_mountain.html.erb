@@ -3,17 +3,17 @@
 
 <div class="col-sm-6 col-md-4">
   <div class="thumbnail mountain-image">
-    <%= link_to image_tag(mountain.image), mountain %>
+    <%= link_to image_tag(mountain.image), mountain, { :target => "_blank" } %>
     <div class="caption">
-      <h3>タイトル：<%= mountain.name %></h3>
+      <h3><%= mountain.name %></h3>
 
         <div class="yama-explain">
           <p>所在地：<%= mountain.where %></p>
-          <p>月額：<%= mountain.price %>円</p>
-          <p>期間：<%= mountain.long %>ヶ月</p>
+          <p>月額：<%= mountain.price %>万円</p>
+          <p>契約期間：<%= mountain.long %>ヶ月</p>
         </div>
 
-      <p><%= link_to '詳細を見にいく', mountain, :class => "btn btn-primary" %></p>
+      <p><%= link_to '詳細を見にいく' , mountain, { :class => "btn btn-primary", :target => "_blank" } %></p>
 
     </div>
   </div>

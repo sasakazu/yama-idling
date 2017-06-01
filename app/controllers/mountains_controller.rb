@@ -47,13 +47,15 @@ class MountainsController < ApplicationController
   end
 
   def pay
+    require 'payjp'
     Payjp.api_key = 'sk_test_b0d74878cbcee203531f072b'
-    charge = Payjp::Charge.create(
-    :amount => 3500,
-    :card => params['payjp-token'],
-    :currency => 'jpy',
+    Payjp::Plan.create(
+    amount: 500,
+    currency: 'jpy',
+    interval: 'month',
+    trial_days: 30
 )
-end
+  end
 
 
 

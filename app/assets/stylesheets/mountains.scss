@@ -164,11 +164,24 @@
 
   input[type="submit"] {
     padding: 10px 30px;
-    background: #7ffe3a;
-    color: #000;
-    border: #000 1px solid;
+    background: #07C91A;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 200px;
+    display: block;
+    border: none;
     border-radius: 4px;
     letter-spacing: 5px;
+    margin-top: 70px;
 
+  }
+
+  input[type="submit"]:hover {
+
+    color: #07c91A;
+    background: #fff;
+    border: 1px solid #07c91a;
+    transition: all 0.3s ease-out;
   }
 }

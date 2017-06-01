@@ -20,21 +20,49 @@
    <%= f.label :場所 %><br>
    <%= f.text_field :where %><br>
 
-   <%= f.label :契約期間 %><br>
-   <%= f.text_field :long %><br>
+   <%= f.label :契約期間 %>：
 
-   <%= f.label :契約金額 %><br>
-   <%= f.text_field :price %><br>
+   <%= f.select :long,  [["1ヶ月", "1"],
+                         ["2ヶ月", "2"],
+                         ["3ヶ月", "3"],
+                         ["4ヶ月", "4"],
+                         ["5ヶ月", "5"],
+                         ["6ヶ月", "6"],
+                         ["7ヶ月", "7"],
+                         ["8ヶ月", "8"],
+                         ["9ヶ月", "9"],
+                         ["10ヶ月", "10"],
+                         ["11ヶ月", "11"],
+                         ["12ヶ月", "12"]]
+
+                             %></br>
 
 
-   <%= f.label :画像１ %><br>
-   <%= f.file_field :image %><br>
 
-   <%= f.label :画像２ %><br>
-   <%= f.file_field :image2 %><br>
+   <%= f.label :契約料金 %>：
 
-   <%= f.label :画像３ %><br>
-   <%= f.file_field :image3 %><br>
+   月 <%= f.select :price, [["1万円", "1"],
+                            ["3万円", "3"],
+                            ["5万円", "5"],
+                            ["7万円", "7"],
+                            ["10万円", "1"],
+                            ["15万円", "15"],
+                            ["20万円", "20"],
+                            ["25万円", "25"],
+                            ["30万円", "30"],
+                            ["35万円", "35"],
+                            ["40万円", "40"],
+                            ["45万円", "45"],
+                            ["50万円", "50"]] %></br>
+
+   <%= f.label :風景写真１ %>
+   <%= f.file_field :image %>
+
+   <%= f.label :風景写真２ %>
+   <%= f.file_field :image2 %>
+
+   <%= f.label :風景写真３ %>
+   <%= f.file_field :image3 %>
 
 <div class="mountain-new-submit">
   <%= f.submit "登録する" %><br>
