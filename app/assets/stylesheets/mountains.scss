@@ -67,6 +67,8 @@
 
 .mountain-user {
   padding-bottom: 50px;
+  margin-bottom: 78px;
+  margin-top: 77px;
 }
 
 .mountain-show-contents {
@@ -74,14 +76,18 @@
     margin-bottom: 100px;
 
   img {
+
     height: 100px;
     width: 100px;
+    display: block;
+    margin: 0 auto;
+
   }
 }
 
 .mountain-title {
+  text-align: center;
   font-size: 40px;
-  margin-left: 80px;
   padding-bottom: 30px;
 }
 
@@ -113,6 +119,32 @@
     color: #eb5b26;
   }
 
+}
+
+.pay-and-contact {
+  margin-bottom: 100px;
+
+
+}
+
+.chat {
+  a {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    padding: 10px;
+    border: solid 1px #24c20b;
+    color: #24c20b;
+    text-align: center;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #24c20b;
+    transition: all 0.3s ease-out;
+
+  }
 }
 
 

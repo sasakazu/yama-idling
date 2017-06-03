@@ -8,7 +8,7 @@
 
 
     <div class="mountain-show-contents">
-      <div class="container mountain-user">
+      <div class="mountain-user">
 
         <div class="mountain-title col-md-5">
           <h2><%= @mountain.name %></h2>
@@ -19,6 +19,7 @@
           <%= link_to image_tag(@user.icon, :class => "img-circle"), @user %>
 
         </div>
+
 
       </div>
 
@@ -80,13 +81,97 @@
 
   </div>
 
-  <div class="chat">
-    <%= link_to '問い合わせする' %>
-  </div>
 
-  <%= form_tag(action: :pay, method: :post) do %>
-     <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80"></script>
-  <% end %>
+  <div class="pay-and-contact">
+
+    <div class="chat col-md-6">
+      <%= link_to '問い合わせする' %>
+    </div>
+
+    <div class="pay col-md-6">
+
+    <% if @mountain.price == 1 %>
+
+    <%= form_tag(action: :pay1, method: :post) do %>
+      <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+    <% end %>
+
+      <% elsif @mountain.price == 3 %>
+
+
+            <%= form_tag(action: :pay3, method: :post) do %>
+             <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+            <% end %>
+
+      <% elsif @mountain.price == 5 %>
+
+
+      <%= form_tag(action: :pay5, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+      <% elsif @mountain.price == 7 %>
+
+
+      <%= form_tag(action: :pay7, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+      <% elsif @mountain.price == 10 %>
+      <%= form_tag(action: :pay10, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+
+      <% elsif @mountain.price == 15 %>
+      <%= form_tag(action: :pay15, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+      <% elsif @mountain.price == 20 %>
+      <%= form_tag(action: :pay20, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+      <% elsif @mountain.price == 25 %>
+      <%= form_tag(action: :pay25, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+      <% elsif @mountain.price == 30 %>
+      <%= form_tag(action: :pay30, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+      <% elsif @mountain.price == 35 %>
+      <%= form_tag(action: :pay35, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+      <% elsif @mountain.price == 40 %>
+      <%= form_tag(action: :pay40, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+      <% elsif @mountain.price == 45 %>
+      <%= form_tag(action: :pay45, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+
+      <% elsif @mountain.price == 50 %>
+      <%= form_tag(action: :pay50, method: :post) do %>
+           <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_d4f1d40f09a5a296ab6cdf80" data-text="契約する" data-submit-text="契約する" ></script>
+      <% end %>
+
+    <% end %>
+
+
+
+    </div>
+
+  </div>
+  <!-- pay-and-contact -->
 
   </div>
   <!-- mountain-show -->

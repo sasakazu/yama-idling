@@ -39,23 +39,33 @@ class MountainsController < ApplicationController
     @mountain = Mountain.find(params[:id])
     @user = @mountain.user
 
+
   end
+
 
 
   def index
     @mountains = Mountain.all
   end
 
-  def pay
-    require 'payjp'
+
+# test
+def pay1
+
     Payjp.api_key = 'sk_test_b0d74878cbcee203531f072b'
+
     Payjp::Plan.create(
-    amount: 500,
-    currency: 'jpy',
-    interval: 'month',
-    trial_days: 30
-)
-  end
+      amount: 10000,
+      currency: 'jpy',
+      interval: 'month',
+      trial_days: 30
+    )
+
+    render 'shared/payed'
+
+end
+
+
 
 
 
