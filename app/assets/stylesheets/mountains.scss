@@ -35,10 +35,24 @@
 }
 
 .mountain-image {
+
+  height: 466px;
+  position: relative;
+
   img {
     height: 180px!important;
     width: 100%!important;
   }
+}
+
+.button-detail {
+  position: absolute;
+  bottom: 13px;
+  text-align: center;
+  display: block;
+  width: 92%;
+  margin:  3px auto;
+
 }
 
 
