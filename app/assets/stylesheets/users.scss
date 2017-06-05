@@ -76,7 +76,7 @@
 
   input[type="submit"] {
       margin-top: 50px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       padding: 10px;
       background: rgb(49, 198, 19);
       color: #FFF;
@@ -99,6 +99,8 @@
   text-align: center;
   color: #666;
   margin-top: 50px;
+  padding-right: 71px;
+  margin-bottom: 14px;
 
 }
 
@@ -124,7 +126,7 @@
     padding: 7px;
     font-size: 1.3em;
     font-family: Arial, sans-serif;
-    color: #aaa;
+    color: #555;
     border:solid 1px #ccc;
     margin: 0 0 20px;
     -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
@@ -145,5 +147,65 @@
   label {
     margin-top: 10px;
   }
+
+}
+
+// sessions/new.html.erb
+
+.login-wrapper {
+
+  width: 50%;
+  margin: 70px auto 100px;
+
+  h2 {
+    color: #666;
+    text-align: center;
+    margin-bottom: 50px;
+
+  }
+
+  input[type="email"] {
+    width: 90%;
+    padding: 7px;
+  }
+
+  input[type="password"] {
+    width: 90%;
+    padding: 7px;
+  }
+
+  input[type="email"] {
+      width: 90%;
+    }
+
+  label {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+
+  input[type="submit"] {
+      margin-top: 50px;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: rgb(49, 198, 19);
+      color: #FFF;
+      border: none;
+      text-align: center;
+      width: 200px;
+      display: block;
+      border-radius: 3px;
+
+      margin-bottom: 50px;
+    }
+
+   input[type="submit"]:hover {
+
+       color: #FFF;
+       background: #53d42c;
+       text-decoration: none;
+       transition: all 0.3s ease-out;
+
+   }
 
 }
