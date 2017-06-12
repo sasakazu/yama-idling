@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
 
-  #
-  # resources :user, :shallow => true do
-  #   resources :users
-  # end
-
-  # get '/mountains/:user_id' => 'users#show'
 
   resources :mountains
 
   devise_for :users
 
   resources :users
+
+  root 'chat_rooms#show'
+
+
 
   post 'mountain/pay1' => 'mountains#pay1'
   post 'mountain/pay2' => 'mountains#pay3'
@@ -27,11 +25,12 @@ Rails.application.routes.draw do
   post 'mountain/pay4' => 'mountains#pay45'
   post 'mountain/pay5' => 'mountains#pay50'
 
-  root 'pages#home'
+  # root 'pages#home'
 
   get 'pages/about'
-
   get 'pages/contact'
+
+  mount ActionCable.server => '/cable'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
