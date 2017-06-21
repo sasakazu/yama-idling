@@ -8,7 +8,13 @@ class User < ApplicationRecord
 
   has_many :mountains, dependent: :destroy
 
-  # has_many :messages
-  # has_many :chat_rooms, through: :messages
+  
+  has_many :chat_rooms, class_name:  "ChatRoom",
+                                  foreign_key: "user_id",
+                                  dependent:   :destroy
+
+
+  has_many :messages, through: :chat_rooms
+
 
 end

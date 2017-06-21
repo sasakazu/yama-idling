@@ -4,5 +4,19 @@
 <h1>chat#new</h1>
 
 
+<%= form_for @chat_room do |f| %>
+
+
+
+   <%= f.label :タイトル %><br>
+   <%= f.text_field :title %><br>
+
+<%= f.submit '送信' %>
+
+
+<% end %>
+
+
+
 
 <%= render 'shared/footer' %>

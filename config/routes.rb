@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
 
+  root 'pages#home'
 
-  resources :mountains
 
   devise_for :users
 
+  resources :mountains
+
   resources :users
 
-  root 'chat_rooms#show'
+  resources :messages
 
 
 
@@ -25,7 +27,6 @@ Rails.application.routes.draw do
   post 'mountain/pay4' => 'mountains#pay45'
   post 'mountain/pay5' => 'mountains#pay50'
 
-  # root 'pages#home'
 
   get 'pages/about'
   get 'pages/contact'

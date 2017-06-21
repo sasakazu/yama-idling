@@ -1,7 +1,11 @@
 class ChatRoom < ApplicationRecord
-  #
-  # has_many :messages, dependent: :destroy
-  # has_many :users, through: :messages
-  # validates :topic, presence: true, uniqueness: true, case_sensitive: false
+
+  belongs_to :user, foreign_key: "user_id"
+  belongs_to :message ,foreign_key: "message_id"
+
+  validates :user_id, presence: true
+  validates :message_id, presence: true
+
+
 
 end

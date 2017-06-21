@@ -1,6 +1,10 @@
 class Message < ApplicationRecord
 
   after_create_commit { MessageBroadcastJob.perform_later self }
-  # belongs_to :user
-  # belongs_to :chat_room
+
+  has_many :users, through: :chat_rooms
+  has_many :chat_rooms
+  accepts_nested_attributes_for :chat_rooms
+
+
 end

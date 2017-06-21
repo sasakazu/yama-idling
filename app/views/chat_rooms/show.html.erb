@@ -1,12 +1,21 @@
 
+<%= render 'shared/header' %>
 
-<h1>chat room</h1>
+<h1>chat rooms#show</h1>
 
 <div id="messages">
-  <%= render @messages %>
+
+  <%= @chat_room.title %>
 </div>
+
+<%= render @messages %>
+
+<%= link_to 'index', chat_rooms_path %>
 
 <form action="">
   <label for="">say something:</label>
   <input type="text" data-behavior="room_speaker">
 </form>
+
+
+<%= render 'shared/footer' %>

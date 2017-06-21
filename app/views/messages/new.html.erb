@@ -1,0 +1,19 @@
+
+<%= render 'shared/header' %>
+message#new
+
+
+<%= form_for @message do |f| %>
+
+
+
+   <%= f.label :コンテント %><br>
+   <%= f.text_field :content %><br>
+
+
+   <%= f.submit "送信" %><br>
+
+<% end %>
+
+
+<%= render 'shared/footer' %>
